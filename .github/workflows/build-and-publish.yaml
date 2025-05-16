@@ -37,6 +37,8 @@ jobs:
             dockerfile: image-proxy/Dockerfile
           - package: vote_listener
             dockerfile: vote_listener/Dockerfile
+          - package: stats-channel-updater
+            dockerfile: stats-channel-updater/Dockerfile
     permissions:
       contents: read
       packages: write
