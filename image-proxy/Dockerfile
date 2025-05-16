@@ -8,6 +8,8 @@ WORKDIR /tmp/compile
 
 COPY . .
 
+RUN rustup install nightly
+
 RUN cargo +nightly build --release --bin image-proxy
 
 # Prod container
