@@ -8,7 +8,7 @@ async fn main() -> Result<(), Error> {
 
     info!("Loading Config...");
     let config = Config::new();
-    info!(config.cache_uri);
+    info!("{}", config.cache_uri);
 
     info!("Connecting to Cache...");
     let cache = PostgresCache::connect(config.cache_uri.clone(), cache::Options::default(), 1)
