@@ -8,7 +8,7 @@ WORKDIR /tmp/compile
 
 COPY . .
 
-RUN cargo build --release --bin image-proxy
+RUN cargo +nightly build --release --bin image-proxy
 
 # Prod container
 FROM debian:buster
