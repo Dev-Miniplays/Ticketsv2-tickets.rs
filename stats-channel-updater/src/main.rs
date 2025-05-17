@@ -12,6 +12,7 @@ use std::thread::sleep;
 use std::time::Duration;
 
 fn main() {
+    std::env::set_var("RUST_LOG", "debug");
     env_logger::init();
 
     let conf = Config::load();
@@ -32,7 +33,7 @@ fn do_update(client: &Client) {
         }
     };
 
-    debug!("Server count: {}", count);
+    debug!("Server anzahl: {}", count);
 
     if let Err(e) = client.update_channel(count) {
         error!("Error updating channel: {}", e);

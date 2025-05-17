@@ -1,11 +1,11 @@
 use cache::PostgresCache;
-use log::info;
+use log::{info, debug};
 use server_counter::{http::Server, Config, Error};
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
+    std::env::set_var("RUST_LOG", "debug");
     env_logger::init();
-    console_log::init_with_level(Level::Debug);
 
     info!("Loading Config...");
     let config = Config::new();
