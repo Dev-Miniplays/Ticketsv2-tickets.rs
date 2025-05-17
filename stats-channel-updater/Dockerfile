@@ -1,6 +1,6 @@
 FROM rust:1-buster AS builder
 
-RUN apt-get update && apt-get -y upgrade && apt-get -y install git openssl libssl-dev ca-certificates cmake
+RUN apt-get update && apt-get -y upgrade && apt-get -y install git openssl libssl-dev ca-certificates cmake curl
 
 RUN mkdir -p /tmp/compile
 WORKDIR /tmp/compile
