@@ -15,6 +15,8 @@ fn main() {
     std::env::set_var("RUST_LOG", "debug");
     env_logger::init();
 
+    sleep(Duration::from_secs(10));
+
     let conf = Config::load();
     let client = Client::new(conf);
 
