@@ -5,6 +5,7 @@ use server_counter::{http::Server, Config, Error};
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     env_logger::init();
+    console_log::init_with_level(Level::Debug);
 
     info!("Loading Config...");
     let config = Config::new();
