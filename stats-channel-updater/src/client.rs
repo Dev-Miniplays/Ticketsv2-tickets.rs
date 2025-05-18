@@ -43,7 +43,7 @@ impl Client {
 
     pub fn update_channel(&self, server_count: usize) -> Result<()> {
         let body = ChannelUpdateBody {
-            name: format!("Server Count: {}", server_count),
+            name: format!("Server Anzahl: {}", server_count),
         };
 
         let url = format!(

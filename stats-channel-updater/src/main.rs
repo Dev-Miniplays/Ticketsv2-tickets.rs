@@ -22,7 +22,7 @@ fn main() {
 
     loop {
         do_update(&client);
-        sleep(Duration::from_secs(60 * 10));
+        sleep(Duration::from_secs(60 * 5));
     }
 }
 
